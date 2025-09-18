@@ -1,0 +1,123 @@
+// Import variables and mixins
+@import '../styles/variables';
+@import '../styles/mixins';
+
+// Theme Switcher Base Styles
+.theme-switcher {
+  @include flex-center;
+  gap: $spacing-2;
+  
+  .theme-label {
+    @include body-small;
+    font-weight: $font-medium;
+    color: $text-secondary;
+  }
+  
+  .theme-select {
+    @include input-base;
+    min-width: 120px;
+    cursor: pointer;
+    
+    &:hover {
+      border-color: $border-secondary;
+    }
+  }
+}
+
+// Theme Toggle (Dark/Light switch)
+.theme-toggle {
+  @include button-ghost;
+  @include flex-center;
+  gap: $spacing-2;
+  padding: $spacing-2 $spacing-3;
+  border-radius: $radius-full;
+  background-color: $background-secondary;
+  border: 1px solid $border-primary;
+  min-width: auto;
+  
+  &:hover {
+    background-color: $background-tertiary;
+    transform: none;
+  }
+  
+  .theme-toggle-label {
+    @include body-small;
+    font-weight: $font-medium;
+    
+    @include mobile-only {
+      display: none;
+    }
+  }
+}
+
+// Theme Buttons Group
+.theme-buttons {
+  @include flex-center;
+  gap: $spacing-3;
+  flex-wrap: wrap;
+  
+  .theme-label {
+    @include body-small;
+    font-weight: $font-medium;
+    color: $text-secondary;
+    white-space: nowrap;
+  }
+  
+  .theme-button-group {
+    display: flex;
+    gap: $spacing-1;
+    flex-wrap: wrap;
+    background-color: $background-secondary;
+    padding: $spacing-1;
+    border-radius: $radius-lg;
+    border: 1px solid $border-primary;
+  }
+  
+  .theme-button {
+    @include button-ghost;
+    padding: $spacing-2 $spacing-3;
+    font-size: $font-sm;
+    border-radius: $radius-md;
+    background-color: transparent;
+    color: $text-secondary;
+    min-width: auto;
+    
+    &:hover {
+      background-color: $background-tertiary;
+      color: $text-primary;
+      transform: none;
+    }
+    
+    &.active {
+      background-color: $primary-color;
+      color: $text-inverse;
+      
+      &:hover {
+        background-color: $primary-hover;
+        color: $text-inverse;
+      }
+    }
+    
+    @include mobile-only {
+      font-size: $font-xs;
+      padding: $spacing-1 $spacing-2;
+    }
+  }
+}
+
+// Responsive adjustments
+@include mobile-only {
+  .theme-switcher {
+    .theme-select {
+      min-width: 100px;
+      font-size: $font-sm;
+    }
+  }
+  
+  .theme-buttons {
+    .theme-button-group {
+      gap: 2px;
+      padding: 2px;
+    }
+  }
+}

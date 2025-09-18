@@ -1,0 +1,147 @@
+// ==========================================================================
+// Theme Configuration Examples
+// ==========================================================================
+
+// This file shows examples of how to create different themes
+// by overriding the base variables
+
+// ==========================================================================
+// Dark Theme
+// ==========================================================================
+
+.theme-dark {
+  // Colors
+  --background-primary: #{$dark-background-primary};
+  --background-secondary: #{$dark-background-secondary};  
+  --background-tertiary: #{$dark-background-tertiary};
+  
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --text-tertiary: #{$dark-text-tertiary};
+  
+  --border-primary: #{$dark-border-primary};
+  --border-secondary: #{$dark-border-secondary};
+  
+  // You can also override components
+  .header {
+    background-color: var(--background-primary);
+    border-bottom-color: var(--border-primary);
+  }
+}
+
+// ==========================================================================
+// Professional Blue Theme
+// ==========================================================================
+
+.theme-professional {
+  --primary-color: #1e40af;
+  --primary-light: #3b82f6;
+  --primary-dark: #1e3a8a;
+  --primary-hover: #1d4ed8;
+  
+  --secondary-color: #0f766e;
+  --secondary-light: #14b8a6;
+  --secondary-dark: #134e4a;
+}
+
+// ==========================================================================
+// Creative Purple Theme  
+// ==========================================================================
+
+.theme-creative {
+  --primary-color: #7c3aed;
+  --primary-light: #8b5cf6;
+  --primary-dark: #6d28d9;
+  --primary-hover: #7c2d12;
+  
+  --secondary-color: #dc2626;
+  --secondary-light: #ef4444;
+  --secondary-dark: #b91c1c;
+}
+
+// ==========================================================================
+// Minimalist Theme
+// ==========================================================================
+
+.theme-minimal {
+  --primary-color: #{$gray-800};
+  --primary-light: #{$gray-600};
+  --primary-dark: #{$gray-900};
+  --primary-hover: #{$gray-700};
+  
+  --secondary-color: #{$gray-600};
+  --secondary-light: #{$gray-500};
+  --secondary-dark: #{$gray-700};
+  
+  // Reduce shadows and borders for minimal look
+  --shadow-sm: none;
+  --shadow-base: none;
+  --border-primary: #{$gray-100};
+}
+
+// ==========================================================================
+// Seasonal Themes
+// ==========================================================================
+
+.theme-autumn {
+  --primary-color: #ea580c;
+  --primary-light: #fb923c;
+  --primary-dark: #c2410c;
+  --primary-hover: #dc2626;
+  
+  --secondary-color: #92400e;
+  --secondary-light: #d97706;
+  --secondary-dark: #78350f;
+  
+  --background-primary: #fef7ed;
+  --background-secondary: #fed7aa;
+}
+
+.theme-winter {
+  --primary-color: #0ea5e9;
+  --primary-light: #38bdf8;
+  --primary-dark: #0284c7;
+  --primary-hover: #0369a1;
+  
+  --secondary-color: #6366f1;
+  --secondary-light: #818cf8;
+  --secondary-dark: #4f46e5;
+  
+  --background-primary: #f0f9ff;
+  --background-secondary: #e0f2fe;
+}
+
+// ==========================================================================
+// How to use themes in your components
+// ==========================================================================
+
+/* 
+You can apply themes by adding the theme class to the body or a parent element:
+
+<body className="theme-dark">
+  <!-- Your app content -->
+</body>
+
+Or create a theme switcher:
+
+const [theme, setTheme] = useState('theme-light');
+
+<body className={theme}>
+  <button onClick={() => setTheme('theme-dark')}>Dark Mode</button>
+  <button onClick={() => setTheme('theme-professional')}>Professional</button>
+</body>
+
+In your SCSS files, you can then use CSS custom properties:
+
+.my-component {
+  background-color: var(--background-primary, #{$background-primary});
+  color: var(--text-primary, #{$text-primary});
+}
+
+Or continue using SCSS variables for consistency:
+
+.my-component {
+  background-color: $background-primary;
+  color: $text-primary;
+}
+*/
