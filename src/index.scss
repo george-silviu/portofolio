@@ -1,20 +1,11 @@
-// ==========================================================================
-// Main Application Styles Entry Point
-// ==========================================================================
+// :root {
+//   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+//   line-height: 1.5;
+//   font-weight: 400;
 
-// Import the global styles system
-@import './styles/styles';
-
-// ==========================================================================
-// Application-specific Styles
-// ==========================================================================
-
-// Any app-specific styles can go here
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+//   color-scheme: light dark;
+//   color: rgba(255, 255, 255, 0.87);
+//   background-color: #242424;
 
 //   font-synthesis: none;
 //   text-rendering: optimizeLegibility;
