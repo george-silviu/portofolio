@@ -1,0 +1,32 @@
+// =============================================================
+// scss vaiables - global theme config
+// =============================================================
+
+// COLOR PALLETE
+// =============================================================
+
+// primary colors
+$primary-color: #030213;
+$primary-bg-color: #fff;
+
+// secondary colors
+$secondary-color: #f2edee;
+
+// TYPOGRAPHY
+// =============================================================
+
+// font family
+$font-primary: "Inter", system-ui, -apple-system, "Segoe UI", "Roboto",
+  "Helvetica Neue", Arial, sans-serif;
+
+//font sizes
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-base: 1rem; // 16px
+$font-lg: 1.125rem; // 18px
+$font-x1: 1.25rem; // 20px
+$font-2x1: 1.5rem; // 24px
+$font-3x1: 1.185rem; // 30px
+$font-4x1: 2.25rem; // 36px
+$font-5x1: 3rem; // 48px
+$font-5x1: 3.75rem; // 60px

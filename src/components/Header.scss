@@ -1,5 +1,9 @@
-.header{
-    position: relative;
-    background-color: pink;
-    width: 100%;
+@use "../styles/variables" as v;
+
+.header {
+  position: relative;
+  background-color: v.$primary-bg-color;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  display: flex;
 }
