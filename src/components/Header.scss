@@ -3,7 +3,25 @@
 .header {
   position: relative;
   background-color: v.$primary-bg-color;
-  width: 100%;
+  width: 100vw;
   border-bottom: 1px solid gray;
   display: flex;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    padding-left: 10%;
+  }
+
+  .nav-right {
+    padding-right: 10%;
+    display: flex;
+    gap: 10px;
+
+    .nav-item {
+      cursor: pointer;
+    }
+  }
 }
