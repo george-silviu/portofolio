@@ -1,4 +1,4 @@
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <a className="logo">Silviu Costache</a>
@@ -12,3 +12,5 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+
+export default Header;

@@ -1,0 +1,28 @@
+.app-layout {
+  min-height: 100dvh;       /* full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-layout > main {
+  flex: 1 1 auto;           /* take remaining space under header */
+  display: flex;
+  min-height: 0;            /* allow children to size correctly */
+}
+
+/* Outlet wrapper (e.g., .home-page) fills main and stacks its children */
+.app-layout > main > * {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each section (Hero, Skills) takes one full screen height of main */
+.app-layout > main > * > * {
+  flex: 0 0 100%;
+}
+
+
+// .app-layout > main > * { overflow-y: auto; scroll-snap-type: y mandatory; }
+// .app-layout > main > * > * { scroll-snap-align: start; }
