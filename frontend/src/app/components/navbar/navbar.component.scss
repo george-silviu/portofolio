@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+nav {
+    display: flex;
+    width: 232px;
+    padding: 20px;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $card-bg;
+    box-shadow: -1px 0 0 $line;
+}

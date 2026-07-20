@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { Dashboard } from './components/dashboard/dashboad.component';
+import { Dashboard } from './components/dashboard/dashboard.component';
 import { Navbar } from './components/navbar/navbar.component';
 
 @Component({
