@@ -1,5 +1,9 @@
 @import '../../styles/variables.scss';
 
+:host {
+    display: contents;
+}
+
 nav {
     display: flex;
     width: 232px;

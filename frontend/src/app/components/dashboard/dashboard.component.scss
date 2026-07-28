@@ -1,5 +1,9 @@
+:host {
+    display: contents;
+}
+
 main {
     padding: 10px;
-    flex: 1 1;
+    flex: 1 1 0%;
     min-width: 0;
 }
