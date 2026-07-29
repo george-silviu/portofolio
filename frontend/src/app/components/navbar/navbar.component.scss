@@ -1,13 +1,13 @@
 @import '../../styles/variables.scss';
 
 :host {
-    display: contents;
+    display: flex;
 }
 
 nav {
     display: flex;
-    width: 232px;
     flex-direction: column;
+    width: 232px;
     height: 100vh;
     background-color: $card-bg;
     box-shadow: inset -1px 0 0 $line;
@@ -27,5 +27,7 @@ nav {
         flex: 1 1 0%;
     }
 
-    .contact {}
+    .contact {
+        display: block;
+    }
 }
