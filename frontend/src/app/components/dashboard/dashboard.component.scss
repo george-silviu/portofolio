@@ -1,8 +1,15 @@
+@import '../../styles/variables.scss';
+
 :host {
     flex: 1 1 0%;
     padding: 10px;
+    background-color: $bg;
 }
 
 main {
-    min-width: 0;
+    .card {
+        border-radius: 5px;
+        padding: 36px 32px;
+        background-color: $card-bg
+    }
 }
