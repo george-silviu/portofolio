@@ -84,9 +84,14 @@ nav {
             }
 
             .link-count {
+                font-size: 10px;
                 display: flex;
                 align-items: center;
-                height: 16px;
+                box-shadow: 0 0 0 1px $line;
+                background-color: $bg;
+                border-radius: 50%;
+                padding: 3px 7px;
+                font-weight: 600;
             }
         }
     }
