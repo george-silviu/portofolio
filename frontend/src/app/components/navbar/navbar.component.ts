@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 import { ObjectsColumn } from '@primeicons/angular/objects-column';
 import { FolderOpen } from '@primeicons/angular/folder-open';
@@ -13,6 +13,7 @@ import { Bookmark } from '@primeicons/angular/bookmark';
     styleUrl: './navbar.component.scss',
     imports: [
         RouterLink,
+        RouterLinkActive,
         ObjectsColumn,
         FolderOpen,
         FileEdit,

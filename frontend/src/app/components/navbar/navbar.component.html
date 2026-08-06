@@ -15,7 +15,7 @@
     </div>
 
     <div class="nav-links">
-        <div class="link" routerLink="/">
+        <a class="link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
             <div class="link-main">
                 <div class="icon">
                     <svg data-p-icon="objects-column" [size]="16"></svg>
@@ -24,13 +24,49 @@
                     Dashboard
                 </div>
             </div>
+            <!-- <div class="link-count">
+                3
+            </div> -->
+        </a>
+        <a class="link" routerLink="projects" routerLinkActive="active-link">
+            <div class="link-main">
+                <div class="icon">
+                    <svg data-p-icon="folder-open" [size]="16"></svg>
+                </div>
+                <div class="link-text">
+                    Projects
+                </div>
+            </div>
+            <div class="link-count">
+                1
+            </div>
+        </a>
+        <a class="link" routerLink="articles" routerLinkActive="active-link">
+            <div class="link-main">
+                <div class="icon">
+                    <svg data-p-icon="file-edit" [size]="16"></svg>
+                </div>
+                <div class="link-text">
+                    Articles
+                </div>
+            </div>
+            <div class="link-count">
+                2
+            </div>
+        </a>
+        <a class="link" routerLink="resources" routerLinkActive="active-link">
+            <div class="link-main">
+                <div class="icon">
+                    <svg data-p-icon="bookmark" [size]="16"></svg>
+                </div>
+                <div class="link-text">
+                    Resources
+                </div>
+            </div>
             <div class="link-count">
                 3
             </div>
-        </div>
-        <div class="link" routerLink="projects">Projects</div>
-        <div class="link" routerLink="articles">Articles</div>
-        <div class="link" routerLink="resources">Resources</div>
+        </a>
     </div>
 
     <div class="contact">
