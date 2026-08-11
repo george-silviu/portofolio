@@ -114,13 +114,25 @@ nav {
             text-transform: uppercase;
         }
 
-        .links {
+        .contact-links {
+            margin-top: 5px;
             display: flex;
             flex-direction: column;
+            gap: 5px;
 
-            .link-icon {}
+            .c-link {
+                display: flex;
+                gap: 6px;
+                cursor: pointer;
 
-            .link-text {}
+                a {
+                    font-size: 12px;
+                }
+
+                :hover {
+                    opacity: .75;
+                }
+            }
         }
     }
 }
