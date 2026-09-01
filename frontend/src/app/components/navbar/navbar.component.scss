@@ -131,6 +131,8 @@ nav {
                 cursor: pointer;
 
                 a {
+                    color: $accent;
+                    text-decoration: none;
                     font-size: 12px;
                 }
 
@@ -138,6 +140,18 @@ nav {
                     opacity: .75;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        height: auto;
+        flex: 1 1 0%; // strech to the entire available space
+
+        .nav-links,
+        .contact {
+            display: none;
         }
     }
 }
