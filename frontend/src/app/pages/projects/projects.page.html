@@ -1,19 +1,33 @@
 <div class="projects__page">
     <section class="projects__header">
         <h1 class="projects__title">Proiecte</h1>
-        <div class="projects__count">5 / {{projects.length}}</div>
+        <span class="projects__count">5 / {{projects.length}}</span>
     </section>
 
     <section class="projects__filters">
         <div class="projects__search">
-            <p-inputgroup>
-                <!-- <p-inputgroup-addon>
-                    <svg data-p-icon="user" />
-                </p-inputgroup-addon> -->
-                <input pInputText [(ngModel)]="searchText" placeholder="Username" />
-            </p-inputgroup>
+            <svg class="search_icon" data-p-icon="search"></svg>
+            <input class="search_input" type="text" placeholder="Caută proiecte...">
         </div>
-        <div class="projects__status_filters"></div>
+        <div class="projects__status_filters">
+            <button [class]="selectedFilter === 'ALL' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ALL')">
+                Toate
+            </button>
+            <button [class]="selectedFilter === 'ACTIVE' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ACTIVE')">
+                Active
+            </button>
+            <button [class]="selectedFilter === 'DELIVERED' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('DELIVERED')">
+                Livrate
+            </button>
+            <button [class]="selectedFilter === 'ARCHIVED' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ARCHIVED')">
+                Arhivate
+            </button>
+        </div>
+
     </section>
 
     <section class="projects__grid">

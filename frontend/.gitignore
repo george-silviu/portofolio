@@ -30,6 +30,9 @@ package-lock.json
 !.vscode/mcp.json
 .history/*
 
+# Environment files with secrets
+/src/environments/environment.ts
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/

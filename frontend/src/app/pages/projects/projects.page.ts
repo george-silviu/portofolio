@@ -1,15 +1,14 @@
 import { Component } from "@angular/core";
 import { FormsModule } from '@angular/forms';
-import { InputGroupModule } from 'primeng/inputgroup';
-import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
-import { InputTextModule } from 'primeng/inputtext';
-import { User } from '@primeicons/angular/user';
+import { Search } from '@primeicons/angular/search';
+
+type FILTER_TYPE = "ALL" | "ACTIVE" | "ARCHIVED" | "DELIVERED";
 
 @Component({
     selector: "app-projects-page",
     templateUrl: "./projects.page.html",
     styleUrl: "./projects.page.scss",
-    imports: [InputGroupModule, InputGroupAddonModule, InputTextModule, FormsModule, User]
+    imports: [FormsModule, Search]
 })
 export class ProjectsPage {
     projects = [
@@ -55,4 +54,10 @@ export class ProjectsPage {
         }
     ];
     searchText = '';
+
+    selectedFilter: FILTER_TYPE = "ALL";
+
+    changeSelectedFilter(filter: FILTER_TYPE) {
+        this.selectedFilter = filter;
+    }
 }
