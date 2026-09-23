@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { Search } from '@primeicons/angular/search';
+import { ProjectCard } from "../../components/project-card/project-card";
 
 type FILTER_TYPE = "ALL" | "ACTIVE" | "ARCHIVED" | "DELIVERED";
 
@@ -8,7 +9,7 @@ type FILTER_TYPE = "ALL" | "ACTIVE" | "ARCHIVED" | "DELIVERED";
     selector: "app-projects-page",
     templateUrl: "./projects.page.html",
     styleUrl: "./projects.page.scss",
-    imports: [FormsModule, Search]
+    imports: [FormsModule, Search, ProjectCard]
 })
 export class ProjectsPage {
     projects = [
