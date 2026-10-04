@@ -15,58 +15,25 @@
     </div>
 
     <div class="nav-links">
-        <a class="link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
+        @for(navlink of navLinks; track navlink.pageName){
+        <a class="link" [routerLink]="navlink.navigateTo" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="navlink.pageName === 'Dashboard' ? {exact:true} : {exact:false}">
             <div class="link-main">
                 <div class="icon">
-                    <svg data-p-icon="objects-column" [size]="17"></svg>
+                    <ng-container *ngComponentOutlet="navlink.icon">
+                    </ng-container>
                 </div>
                 <div class="link-text">
-                    Dashboard
+                    {{navlink.pageName}}
                 </div>
             </div>
-            <!-- <div class="link-count">
-                3
-            </div> -->
-        </a>
-        <a class="link" routerLink="projects" routerLinkActive="active-link">
-            <div class="link-main">
-                <div class="icon">
-                    <svg data-p-icon="folder-open" [size]="17"></svg>
-                </div>
-                <div class="link-text">
-                    Proiecte
-                </div>
-            </div>
+            @if(navlink.count > 0){
             <div class="link-count">
-                1
+                {{navlink.count}}
             </div>
+            }
         </a>
-        <a class="link" routerLink="articles" routerLinkActive="active-link">
-            <div class="link-main">
-                <div class="icon">
-                    <svg data-p-icon="file-edit" [size]="17"></svg>
-                </div>
-                <div class="link-text">
-                    Articole
-                </div>
-            </div>
-            <div class="link-count">
-                2
-            </div>
-        </a>
-        <a class="link" routerLink="resources" routerLinkActive="active-link">
-            <div class="link-main">
-                <div class="icon">
-                    <svg data-p-icon="bookmark" [size]="17"></svg>
-                </div>
-                <div class="link-text">
-                    Resurse
-                </div>
-            </div>
-            <div class="link-count">
-                3
-            </div>
-        </a>
+        }
     </div>
 
     <div class="contact">
