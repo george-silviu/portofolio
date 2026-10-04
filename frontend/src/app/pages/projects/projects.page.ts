@@ -54,8 +54,8 @@ export class ProjectsPage {
             tags: ["Angular", "NestJS", "MongoDB"]
         }
     ];
-    searchText = '';
 
+    searchText = '';
     selectedFilter: FILTER_TYPE = "ALL";
 
     changeSelectedFilter(filter: FILTER_TYPE) {

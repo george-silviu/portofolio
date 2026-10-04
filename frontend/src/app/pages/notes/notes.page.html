@@ -1,0 +1,37 @@
+<div class="notes__page">
+    <section class="notes__header">
+        <h1 class="notes__title">Notițe</h1>
+        <span class="notes__count">4 / 4</span>
+    </section>
+
+    <section class="notes__filters">
+        <div class="notes__search">
+            <svg class="search_icon" data-p-icon="search"></svg>
+            <input class="search_input" type="text" placeholder="Caută notițe...">
+        </div>
+        <div class="notes__status_filters">
+            <button [class]="selectedFilter === 'ALL' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ALL')">
+                Toate
+            </button>
+            <button [class]="selectedFilter === 'ACTIVE' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ACTIVE')">
+                Dev
+            </button>
+            <button [class]="selectedFilter === 'DELIVERED' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('DELIVERED')">
+                Găndire
+            </button>
+            <button [class]="selectedFilter === 'ARCHIVED' ? 'filter_button selected' : 'filter_button' " type="button"
+                (click)="changeSelectedFilter('ARCHIVED')">
+                Viață
+            </button>
+        </div>
+    </section>
+
+    <section class="notes__list">
+        <app-note-card />
+        <app-note-card />
+        <app-note-card />
+    </section>
+</div>

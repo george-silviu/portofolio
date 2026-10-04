@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import {
     DashboardPage,
     ProjectsPage,
-    ArticlesPage,
+    NotesPage,
     ResourcesPage
 } from './pages';
 
@@ -17,8 +17,8 @@ export const routes: Routes = [
         component: ProjectsPage
     },
     {
-        path: "articles",
-        component: ArticlesPage
+        path: "notes",
+        component: NotesPage
     },
     {
         path: "resources",
