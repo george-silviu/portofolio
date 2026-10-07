@@ -8,6 +8,8 @@ import { Bookmark } from '@primeicons/angular/bookmark';
 import { Github } from '@primeicons/angular/github';
 import { Linkedin } from '@primeicons/angular/linkedin';
 import { AddressBook } from '@primeicons/angular/address-book';
+import { AlignJustify } from '@primeicons/angular/align-justify';
+import { Times } from '@primeicons/angular/times';
 
 @Component({
     standalone: true,
@@ -17,17 +19,16 @@ import { AddressBook } from '@primeicons/angular/address-book';
     imports: [
         RouterLink,
         RouterLinkActive,
-        ObjectsColumn,
-        FolderOpen,
-        FileEdit,
-        Bookmark,
         Github,
         Linkedin,
         AddressBook,
-        NgComponentOutlet
+        NgComponentOutlet,
+        AlignJustify,
+        Times
     ]
 })
 export class Navbar {
+    isMobileNavigationDisplayed: boolean = false;
     navLinks = [
         {
             pageName: "Dashboard",
@@ -52,4 +53,18 @@ export class Navbar {
             count: 3
         },
     ]
+
+    onMobileMenuClick() {
+        this.isMobileNavigationDisplayed = !this.isMobileNavigationDisplayed;
+    }
+
+    handleMobileNavClick() {
+        this.isMobileNavigationDisplayed = false;
+    }
+
+    handleNavigateToDashboard() {
+        if (this.isMobileNavigationDisplayed === true) {
+            this.isMobileNavigationDisplayed = false;
+        }
+    }
 }

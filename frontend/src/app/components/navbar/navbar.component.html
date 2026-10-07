@@ -1,17 +1,50 @@
+<div class="mobile__menu__overlay" [class.open]="isMobileNavigationDisplayed"
+    [class.close]="!isMobileNavigationDisplayed">
+    <div class="nav-links">
+        @for(navlink of navLinks; track navlink.pageName){
+        <a class="link" [routerLink]="navlink.navigateTo" (click)="handleMobileNavClick()">
+            <div class="link-main">
+                <div class="icon">
+                    <ng-container *ngComponentOutlet="navlink.icon">
+                    </ng-container>
+                </div>
+                <div class="link-text">
+                    {{navlink.pageName}}
+                </div>
+            </div>
+            @if(navlink.count > 0){
+            <div class="link-count">
+                {{navlink.count}}
+            </div>
+            }
+        </a>
+        }
+    </div>
+</div>
+
 <nav>
     <div class="logo">
-        <div class="hero-letters">
-            SC
-        </div>
-        <div class="hero">
-            <div class="hero-name">
-                Silviu Costache
+        <div class="hero__main" routerLink="/" (click)="handleNavigateToDashboard()">
+            <div class="hero-letters">
+                SC
             </div>
-            <div class="hero-role">
-                Web developer
+            <div class="hero">
+                <div class="hero-name">
+                    Silviu Costache
+                </div>
+                <div class="hero-role">
+                    Web developer
+                </div>
             </div>
         </div>
 
+        <div class="mobile__menu" (click)="onMobileMenuClick()">
+            @if(isMobileNavigationDisplayed){
+            <svg data-p-icon="times" size="26"></svg>
+            } @else{
+            <svg data-p-icon="align-justify" size="26"></svg>
+            }
+        </div>
     </div>
 
     <div class="nav-links">
@@ -39,12 +72,10 @@
     <div class="contact">
         <span>Contact</span>
         <div class="contact-links">
-
             <div class="c-link">
                 <svg data-p-icon="github" [size]="16"></svg>
                 <a href="https://github.com/george-silviu" target="_blank">github.com/george-silviu</a>
             </div>
-
             <div class="c-link">
                 <svg data-p-icon="linkedin" [size]="16"></svg>
                 <a href="https://www.linkedin.com/in/george-silviu-costache-285050167/"
